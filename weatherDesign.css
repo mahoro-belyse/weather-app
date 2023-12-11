@@ -67,3 +67,8 @@ footer {
 a {
   color: #885df1;
 }
+change {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
