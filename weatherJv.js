@@ -24,7 +24,20 @@ function exchange(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  timeElement.innerHTML = `${date.getDay()} ${date.getHours()}:${
-    date.getMinutes
-  }`;
+  timeElement.innerHTML = formdate(date);
+}
+function formdate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
