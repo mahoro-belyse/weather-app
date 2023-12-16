@@ -23,4 +23,8 @@ function exchange(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  timeElement.innerHTML = `${date.getDay()} ${date.getHours()}:${
+    date.getMinutes
+  }`;
 }
