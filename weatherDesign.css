@@ -72,3 +72,16 @@ change {
   padding: 0px;
   margin: 0px;
 }
+.weathericon {
+  width: 50px;
+  height: 50px;
+}
+#temperaturechange {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.unit {
+  margin-top: 6px;
+  font-size: 28px;
+}

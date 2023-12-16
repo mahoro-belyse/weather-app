@@ -6,6 +6,7 @@ function search(event) {
 }
 let searchinput = document.querySelector("#searchform");
 searchinput.addEventListener("submit", search);
+call("paris");
 function call(city) {
   let apiKey = `d860d36baeo33ebcafd4ec2d01tf4406`;
   let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -25,6 +26,8 @@ function exchange(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formdate(date);
+  let icon = document.querySelector("#temperatureicon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weathericon" />`;
 }
 function formdate(date) {
   let minutes = date.getMinutes();
