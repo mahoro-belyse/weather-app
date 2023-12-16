@@ -22,4 +22,5 @@ function exchange(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  let timeElement = document.querySelector("#time");
 }
